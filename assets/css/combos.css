@@ -1,0 +1,692 @@
+/* Author: Raptor_FGC / RedRaptor10 */
+
+/* Combo Video */
+.combos-video-wrapper {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	width: 100vw;
+}
+
+.combos-video {
+	height: 75%;
+	margin-top: 12.5vh;
+	width: 75%;
+}
+
+.combos-video iframe {
+	background: #000;
+	border: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.combos-video-combo {
+	align-items: center;
+	display: flex;
+	font-size: 48px;
+	font-weight: bold;
+	height: auto;
+	justify-content: center;
+	min-height: 12.5%;
+	text-align: center;
+	width: 95%;
+}
+
+/* Combos Page Description */
+.combos-page-description {
+	font-size: 20px;
+	padding: 16px 0;
+	text-align: center;
+}
+
+/* Combos Page Header */
+.combos-page-header {
+	display: flex;
+}
+
+.combos-page-header-left {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	width: 50%;
+}
+
+.combos-playlist {
+	background-color: #000;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.75);
+	height: 270px;
+	width: 480px;
+}
+
+.combos-playlist iframe {
+	height: 100%;
+	width: 100%;
+}
+
+.combos-page-header-right {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	position: relative;
+	width: 50%;
+}
+
+.combos-page-header-right .kameo-img {
+	position: absolute;
+	transform: translateX(-25%);
+	width: 50%;
+}
+
+.combos-page-header-right .character-img {
+	position: relative;
+	transform: scale(2);
+	transform-origin: top;
+	width: 50%;
+}
+
+/* Combos Select */
+.combos-select {
+	padding: 16px 0;
+}
+
+.combos-select-header {
+	display: flex;
+	font-size: 16px;
+	justify-content: center;
+	text-align: center;
+}
+
+.combos-select-header div:first-child {
+	margin: 0 8px;
+	width: 25%;
+}
+
+.combos-select-header div:last-child {
+	margin-left: 8px;
+	margin-right: calc(12.5% + 20px);
+	width: 25%;
+}
+
+.combos-select form {
+	display: flex;
+	justify-content: center;
+}
+
+.combos-select select {
+	background: rgb(32, 36, 40);
+	border: 1px solid rgb(48, 48, 48);
+	border-radius: 4px;
+	color: rgb(224, 224, 224);
+	font-size: 16px;
+}
+
+.combos-select select:hover {
+	background: rgb(48, 52, 56);
+}
+
+.combos-select form div::after {
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-top: 8px solid rgb(128, 128, 128);
+	content: '';
+	pointer-events: none;
+	position: absolute;
+	right: 8px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.combos-select form div:first-child, .combos-select form div:nth-child(2) {
+	margin: 0 8px;
+	position: relative;
+	width: 25%;
+}
+
+.combos-select form input[type="submit"] {
+	background-color: rgb(32, 48, 64) !important;
+	border-radius: 4px;
+	color: rgb(224, 224, 224) !important;
+	font-size: 16px;
+	margin: 0 8px;
+	transition: filter 0.1s;
+	width: 12.5%;
+}
+
+.combos-select form input[type="submit"]:hover {
+	filter: brightness(125%);
+}
+
+/* Combos Header */
+.combos-header-btns {
+	display: flex;
+	justify-content: flex-end;
+	padding: 8px 0;
+}
+
+.combos-header-toggle-filters-btn,
+.combos-header-toggle-groups-btn {
+	color: rgb(192, 224, 255);
+	cursor: pointer;
+	transition: 0.1s;
+}
+
+.combos-header-toggle-filters-btn:hover,
+.combos-header-toggle-groups-btn:hover {
+	color: #fff;
+}
+
+.combos-header-toggle-filters-btn {
+	margin-right: 16px;
+}
+
+/* Combos Filters */
+.combos-filters {
+	margin-bottom: 8px;
+}
+
+.combos-filters.hidden {
+	display: none;
+}
+
+.combos-filters-label {
+	border-bottom: 1px solid rgb(48, 48, 48);
+	margin-bottom: 8px;
+}
+
+.combos-filters-difficulties {
+	display: flex;
+}
+
+.combos-filters-difficulties .combo-difficulty {
+	width: 10%;
+}
+
+.combos-filters-difficulties .combo-difficulty:not(:last-child) {
+	margin-right: 8px;
+}
+
+.combos-filters-kameo .combo-kameo {
+	width: 10%;
+}
+
+.combos-filters-tags {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* Combos Header Nav */
+.combos-header nav {
+	background-color: rgb(8, 12, 16);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	display: flex;
+	font-size: 20px;
+	font-weight: 200;
+	padding: 8px 0;
+}
+
+.combos-header nav div {
+	text-align: center;
+	width: 50%;
+}
+
+.combos-header nav div:not(.active) {
+	color: rgb(128, 128, 128);
+}
+
+.combos-header nav div.active {
+	color: #fff;
+	cursor: default;
+}
+
+.combos-header nav div:hover:not(.active) {
+	color: #fff;
+	cursor: pointer;
+	font-weight: 200;
+}
+
+/* Combos Body */
+.combos-body {
+	position: relative;
+}
+
+.combos-body .hidden {
+	display: none;
+	position: absolute;
+	top: 0;
+}
+
+.combos-list {
+	padding-top: 8px;
+}
+
+.combos-list-group {
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
+}
+
+.combos-list-group:not(:last-child) {
+	margin-bottom: 16px;
+}
+
+.combos-list-group-header {
+	background: rgb(8, 12, 16);
+	cursor: pointer;
+	display: flex;
+	padding: 0 8px;
+}
+
+.combos-list-group-header:hover {
+	filter: brightness(125%);
+}
+
+.combos-list-subcategory {
+	color: #fff;
+	font-size: 20px;
+	font-weight: 200;
+	padding: 8px 0;
+	text-shadow: 2px 2px 4px #000;
+}
+
+.combos-list-group-toggle-icon {
+	align-items: center;
+	display: flex;
+	font-size: 16px;
+	margin-left: auto;
+}
+
+.combos-list-group-body {
+	background: rgb(32, 36, 40);
+	padding: 8px;
+}
+
+.combos-list-combo {
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 1);
+}
+
+.combos-list-combo:not(:last-child) {
+	margin-bottom: 16px;
+}
+
+.combos-list-combo:last-child {
+	margin-bottom: 8px;
+}
+
+.combos-list-subcategory.hidden, .combos-list-combo.hidden {
+	display: none;
+}
+
+.combos-list-combo-header {
+	align-items: center;
+	background: rgb(16, 20, 24);
+	display: flex;
+	padding: 8px;
+}
+
+.combos-list-combo-header-left {
+	padding-right: 8px;
+	width: 75%;
+}
+
+.combos-list-combo-combo {
+	font-size: 20px;
+	font-weight: 200;
+}
+
+.combos-list-combo-header-right {
+	align-items: center;
+	display: flex;
+	width: 25%;
+}
+
+.combos-list-combo-difficulty {
+	padding: 0 4px;
+	width: 50%;
+}
+
+.combo-kameo, .combo-difficulty, .combo-tag {
+	border-radius: 4px;
+	display: inline-block;
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: 200;
+	margin-bottom: 4px;
+	margin-top: 4px;
+	padding: 2px 8px;
+	text-align: center;
+	text-shadow: 1px 1px #000;
+	white-space: nowrap;
+}
+
+.combo-difficulty {
+	font-weight: 200;
+	text-align: center;
+}
+
+.combos-list-combo .combo-difficulty {
+	width: 100%;
+}
+
+.combo-kameo:hover, .combo-difficulty:hover, .combo-tag:hover {
+	filter: brightness(150%);
+}
+
+.combo-kameo.active, .combo-difficulty.active, .combo-tag.active {
+	filter: brightness(150%);
+}
+
+.combo-kameo.inactive, .combo-difficulty.inactive, .combo-tag.inactive {
+	background-color: rgb(48, 48, 48);
+}
+
+.combo-kameo {
+	background-color: rgb(128, 83, 0); /* Orange */
+}
+
+.combo-difficulty-easy {
+	background-color: rgb(32, 128, 32); /* Light Green */
+}
+
+.combo-difficulty-medium {
+	background-color: rgb(128, 128, 32); /* Light Yellow */
+}
+
+.combo-difficulty-hard {
+	background-color: rgb(128, 32, 32); /* Light Red */
+}
+
+.combos-list-combo-url {
+	padding: 0 4px;
+	text-align: center;
+	width: 25%;
+}
+
+.combo-play-btn {
+	color: rgb(128, 128, 128);
+	cursor: pointer;
+	font-size: 24px;
+	transition: 0.25s;
+}
+
+.combo-play-btn:hover {
+	color: #fff;
+}
+
+.combos-list-combo-damage {
+	color: #fff;
+	font-size: 18px;
+	font-weight: 200;
+	text-align: center;
+	text-shadow: 2px 2px #000;
+	width: 25%;
+}
+
+.combos-list-combo-footer {
+	align-items: center;
+	background: rgb(12, 16, 20);
+	display: flex;
+	padding: 0 8px;
+}
+
+.combos-list-combo-notes {
+	font-size: 16px;
+}
+
+.combos-list-combo-footer-right {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 16px;
+	margin-left: auto;
+	padding: 8px 0;
+}
+
+.combos-list-combo-footer-right > div:not(:last-child) {
+	margin-right: 8px;
+}
+
+.combos-list-combo-meter {
+	white-space: nowrap;
+}
+
+.combos-list-combo-tags {
+	display: flex;
+	flex-wrap: wrap;
+}
+.combo-tag:not(:last-child) {
+	margin-right: 8px;
+}
+
+.combo-tag-buff {
+	background-color: rgb(0, 128, 0); /* Green */
+}
+
+.combo-tag-restand {
+	background-color: rgb(0, 0, 128); /* Blue */
+}
+
+.combo-tag-setup {
+	background-color: rgb(75, 0, 130); /* Indigo */
+}
+
+.combo-tag-sideswitch {
+	background-color: rgb(112, 15, 112); /* Violet */
+}
+
+.combo-tag-unbreakable {
+	background-color: rgb(128, 128, 0); /* Yellow */
+}
+
+.combo-tag-fatal-blow {
+	background-color: rgb(128, 0, 0); /* Red */
+}
+
+/* Mobile */
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+	/* Combo Video */
+	.combos-video {
+		height: 50vh;
+	}
+
+	.combos-video-combo {
+		background-color: #000;
+		font-size: 20px;
+		height: unset;
+		padding: 8px;
+	}
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+	/* Combo Video */
+	.combos-video {
+		height: 75%;
+	}
+
+	.combos-video-combo {
+		font-size: 20px;
+		height: 25%;
+		width: 50%;
+	}
+}
+
+/* Mobile */
+@media screen and (max-width: 1024px) {
+	/* Combo Video */
+	.combos-video {
+		margin-top: unset;
+		width: 100%;
+	}
+
+	.combos-video-combo {
+		font-size: 20px;
+	}
+
+	.combos-video-combo .btn-inputs {
+		min-height: 24px;
+	}
+
+	.combos-video-combo .btn-inputs.btn-inputs-l .btn-inputs-separator {
+		padding: 0 6px;
+	}
+
+	.combos-video-combo .btn-icon {
+		height: 24px;
+		width: 24px;
+	}
+
+	/* Combos Page Description */
+	.combos-page-description {
+		font-size: 16px;
+	}
+
+	/* Combos Page Header */
+	.combos-page-header {
+		display: none;
+	}
+
+	.combos-page-header-left, .combos-page-header-right {
+		width: unset;
+	}
+
+	/* Combos Select */
+	.combos-select-header {
+		display: none;
+	}
+
+	.combos-select form {
+		display: block;
+	}
+
+	.combos-select form div:first-child, .combos-select form div:nth-child(2) {
+		margin: 0 0 8px 0;
+		width: 100%;
+	}
+
+	.combos-select form div:first-child::before {
+		content: 'CHARACTER';
+		display: block;
+		margin-bottom: 4px;
+	}
+
+	.combos-select form div:nth-child(2)::before {
+		content: 'KAMEO';
+		display: block;
+		margin-bottom: 4px;
+	}
+
+	.combos-select form input[type="submit"] {
+		margin: 8px 0;
+		width: 100%;
+	}
+
+	.combos-select form div::after {
+		top: calc(100% - 20px);
+	}
+
+	/* Combos Wrapper */
+	.combos-wrapper {
+		left: -1em;
+		position: relative;
+		width: calc(100% + 2em);
+	}
+
+	/* Combos Header */
+	.combos-header {
+		display: unset;
+	}
+
+	.combos-header-btns {
+		padding: 8px;
+	}
+
+	/* Combos Filters */
+	.combos-filters {
+		padding: 0 8px;
+	}
+
+	.combos-filters-kameo .combo-kameo {
+		width: calc(30% + 8px);
+	}
+
+	.combos-filters-difficulties .combo-difficulty {
+		width: 100%;
+	}
+
+	/* Combos Header Nav */
+	.combos-header nav {
+		position: sticky;
+		top: 0;
+		z-index: 1;
+	}
+
+	/* Combos Body */
+	.combos-list-combo {
+		display: block;
+	}
+
+	.combos-list-combo-header {
+		display: block;
+	}
+
+	.combos-list-combo-header-left {
+		padding-right: unset;
+		width: unset;
+	}
+
+	.combos-list-combo-combo {
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		margin-bottom: 8px;
+		padding-bottom: 8px;
+	}
+
+	.combos-list-combo-header-right {
+		display: block;
+		width: unset;
+	}
+
+	.combos-list-combo-difficulty {
+		padding: unset;
+		width: unset;
+	}
+
+	.combos-list-combo-url, .combos-list-combo-damage {
+		align-items: center;
+		display: inline-flex;
+		height: 32px;
+		margin-top: 8px;
+		vertical-align: top;
+		width: 49%;
+	}
+
+	.combos-list-combo-url {
+		justify-content: flex-end;
+	}
+
+	.combos-list-combo-url .combo-play-btn {
+		transform: translateX(50%);
+	}
+
+	.combos-list-combo-damage {
+		justify-content: flex-end;
+	}
+
+	.combos-list-combo-footer {
+		display: block;
+	}
+
+	.combos-list-combo-footer-right {
+		display: block;
+	}
+
+	.combos-list-combo-notes {
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		padding: 8px 0;
+	}
+
+	.combos-list-combo-tags {
+		width: unset;
+	}
+}

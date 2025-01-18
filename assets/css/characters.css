@@ -1,0 +1,166 @@
+.characters-page .overlay {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+/* Characters Page Header */
+.characters-page-header {
+	display: flex;
+	margin-bottom: 16px;
+}
+
+.characters-page-header.hidden {
+	display: none;
+}
+
+.character-info {
+	width: 50%;
+}
+
+.character-info > div:first-child {
+	height: 300px;
+}
+
+.character-img-wrapper {
+	display: flex;
+	height: 288px;
+	justify-content: center;
+	overflow: hidden;
+	position: relative;
+}
+
+.character-img-wrapper img {
+	height: 100%;
+	opacity: 1;
+	position: absolute;
+	transform: scale(1.5);
+	transform-origin: top;
+	transition: 1s;
+}
+
+.character-img-wrapper img.hidden {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.character-name {
+	color: #fff;
+	font-size: 20px;
+	font-weight: 200;
+	text-shadow: 2px 2px 4px #000;
+}
+
+.character-stats {
+	width: 50%;
+}
+
+.view-stats-btn-wrapper {
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: 8px;
+}
+
+.view-stats-btn-wrapper.hidden {
+	display: none;
+}
+
+.view-stats-btn, .hide-stats-btn {
+	color: rgb(192, 224, 255);
+	cursor: pointer;
+	font-size: 20px;
+	margin-left: 16px;
+	transition: 0.5s;
+}
+
+.hide-stats-btn {
+	margin-left: 16px;
+}
+
+.view-stats-btn:hover, .hide-stats-btn:hover {
+	color: #fff;
+}
+
+/* Character Roster */
+.character-roster-row {
+	display: flex;
+}
+
+.character-roster-row:first-child {
+	margin-bottom: 8px;
+}
+
+.character-roster-portrait:not(:last-child) {
+	margin-right: 8px;
+}
+
+.character-roster-portrait:nth-child(6), .character-roster-portrait:nth-child(13) {
+	margin-right: 16px;
+}
+
+.character-roster-portrait {
+	aspect-ratio: 12/16;
+	background repeat: no-repeat;
+	background-size: cover;
+	background-color: rgb(16, 16, 16);
+	position: relative;
+	width: calc(100% / 19);
+}
+
+.character-roster-portrait:not(.empty) {
+	cursor: pointer;
+}
+
+.character-roster-portrait:not(.empty):hover {
+	filter: brightness(125%);
+}
+
+.character-roster-portrait a {
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+.character-roster-portrait a.hidden {
+	display: none;
+}
+
+/* Mobile */
+@media screen and (max-width: 1024px) {
+	.characters-page-header {
+		display: block;
+	}
+
+	.character-info {
+		display: none;
+	}
+
+	.character-stats {
+		width: unset;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.character-roster-row {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.character-roster-row:first-child {
+		margin-bottom: unset;
+	}
+
+	.character-roster-portrait {
+		margin-bottom: 8px;
+		margin-right: 8px;
+		width: 20%;
+	}
+
+	.character-roster-portrait:not(:last-child) {
+		margin-right: 8px;
+	}
+
+	.character-roster-portrait:nth-child(6), .character-roster-portrait:nth-child(13) {
+		margin-right: 8px;
+	}
+}

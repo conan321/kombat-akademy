@@ -1,0 +1,483 @@
+body.light-theme {
+	color: rgb(32, 32, 32);
+	font-weight: 200;
+}
+
+/* Background */
+body.light-theme, .light-theme  .site-content, .light-theme  .site-content .content-area {
+	background-color: rgb(232, 232, 232);
+}
+
+/* Links */
+.light-theme a, .light-theme a:focus {
+	color: rgb(0, 96, 192);
+}
+
+.light-theme a:hover {
+	color: #000;
+}
+
+/* Dialog Box */
+.light-theme .dialog-box {
+	background-color: rgb(240, 240, 240);
+}
+
+.light-theme .dialog-box-close-btn:hover {
+	color: #000;
+}
+
+/* Guide Navigation */
+.light-theme .guide-navigation select {
+	background: rgb(240, 240, 240);
+	color: rgb(32, 32, 32);
+}
+
+.light-theme .guide-navigation select:hover {
+	background: rgb(224, 224, 224);
+}
+
+/* Guide Pagination */
+.light-theme .guide-pagination {
+	border-top: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.light-theme .guide-pagination-prev-next-btn {
+	background-color: rgb(224, 224, 224);
+	color: rgb(32, 32, 32);
+	text-shadow: unset;
+}
+
+.light-theme .guide-pagination-page-btn {
+	background-color: rgb(224, 224, 224);
+	color: rgb(32, 32, 32);
+	text-shadow: unset;
+}
+
+/* Guide Table */
+.light-theme .guide table thead,
+.light-theme .guide table tbody th {
+	background-color: #fff;
+}
+
+.light-theme .guide table thead th:not(:first-child) {
+	border-left: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.light-theme .guide table tbody th {
+	border-top: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.light-theme .guide table tr:nth-child(2n) td {
+	background-color: rgb(236, 236, 236);
+}
+
+.light-theme .guide table tr:nth-child(2n+1) td {
+	background-color: #fff;
+}
+
+.light-theme .guide table tr {
+	border-left: 1px solid rgb(217, 217, 217);
+	border-right: 1px solid rgb(217, 217, 217);
+}
+
+.light-theme .guide table.highlight-red td.cell-red,
+.light-theme .guide table.hover-red td.cell-red {
+	background: linear-gradient(rgba(255, 0, 0, 0.1), rgba(255, 0, 0, 0.1)), linear-gradient(rgb(236, 236, 236), rgb(236, 236, 236));
+}
+
+.light-theme .guide table.highlight-yellow td.cell-yellow,
+.light-theme .guide table.hover-yellow td.cell-yellow {
+	background: linear-gradient(rgba(255, 255, 0, 0.1), rgba(255, 255, 0, 0.1)), linear-gradient(rgb(236, 236, 236), rgb(236, 236, 236));
+}
+
+.light-theme .guide table.highlight-green td.cell-green,
+.light-theme .guide table.hover-green td.cell-green {
+	background: linear-gradient(rgba(128, 255, 128, 0.1), rgba(128, 255, 128, 0.1)), linear-gradient(rgb(236, 236, 236), rgb(236, 236, 236));
+}
+
+/* Guide Pros & Cons */
+.light-theme .guide .pros-cons {
+	background-color: #fff;
+}
+
+/* Note */
+.light-theme .note {
+	background-color: rgb(160, 176, 192);
+}
+
+.light-theme .note::before {
+	color: #000;
+}
+
+.light-theme .tip {
+	background-color: rgb(160, 192, 160);
+}
+
+.light-theme .tip::before {
+	color: #000;
+}
+
+/* Customify Header */
+.light-theme .header--row .dark-mode {
+	color: rgb(32, 32, 32);
+}
+
+.light-theme .header-top .header--row-inner {
+	background-color: rgb(240, 240, 240);
+}
+
+.light-theme .header-main .dark-mode {
+	background-color: rgb(232, 232, 232);
+}
+
+.light-theme .header-bottom .dark-mode {
+	background: linear-gradient(rgb(224, 224, 224), rgb(192, 192, 192));
+}
+
+.light-theme .primary-menu-ul li:hover {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.light-theme .nav-menu-desktop .menu > li > a {
+	color: rgb(64, 64, 64);
+	text-shadow: 1px 1px 2px #fff;
+}
+
+.light-theme .dark-mode .nav-menu-desktop.style-plain .nav-menu > li > a:hover {
+	color: #000;
+}
+
+.light-theme .nav-menu-desktop .menu li.current-menu-item > a {
+	color: #000;
+}
+
+.light-theme .dark-mode .nav-menu-desktop.style-plain .nav-menu > li.current-menu-item > a {
+	color: #000;
+}
+
+.light-theme .nav-menu-desktop .menu li.current-menu-item > a:hover {
+	color: #000;
+}
+
+.light-theme .nav-menu-desktop .sub-menu {
+	background: linear-gradient(rgb(224, 224, 224), rgb(192, 192, 192));
+}
+
+.light-theme .nav-menu-desktop .sub-menu li a {
+	color: rgb(64, 64, 64);
+	text-shadow: 1px 1px 2px #fff;
+}
+
+.light-theme .nav-menu-desktop .sub-menu li a:hover {
+	color: #000;
+}
+
+/* Customify Header - Mobile */
+.light-theme .header-menu-sidebar.dark-mode .header-menu-sidebar-bg::before {
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.light-theme .header-menu-sidebar.dark-mode .nav-menu a {
+	color: rgba(0, 0, 0, 0.79);
+}
+
+/* Footer */
+.light-theme .footer-bottom .dark-mode {
+	background: rgb(240, 240, 240);
+	color: rgb(32, 32, 32);
+}
+
+.light-theme .footer-bottom a, .light-theme .footer-bottom a:focus {
+	color: rgb(32, 32, 32) !important;
+}
+
+.light-theme .footer-bottom a:hover {
+	color: #000 !important;
+}
+
+/* Characters Page */
+.light-theme .character-name {
+	color: #000;
+	text-shadow: 2px 2px 4px #fff;
+}
+
+.light-theme .view-stats-btn, .light-theme .hide-stats-btn {
+	color: rgb(0, 96, 192);
+}
+
+.light-theme .view-stats-btn:hover, .light-theme .hide-stats-btn:hover {
+	color: #000;
+}
+
+.light-theme .character-roster-portrait {
+	background-color: rgb(240, 240, 240);
+}
+
+.light-theme .character-roster-portrait:not(.empty):hover {
+	filter: brightness(75%);
+}
+
+/* Kameos Page */
+.light-theme .kameo-roster-portrait {
+	background-color: rgb(240, 240, 240);
+}
+
+.light-theme .kameo-roster-portrait:hover {
+	filter: brightness(75%);
+}
+
+/* Character Page */
+.light-theme .character-nav div {
+	background-color: rgb(240, 240, 240);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	color: #000;
+}
+
+.light-theme .character-info-header {
+	background-color: rgb(240, 240, 240);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.light-theme .character-page h2 span {
+	color: rgb(32, 32, 32);
+}
+
+.light-theme .character-pros-cons {
+	background-color: rgb(240, 240, 240);
+}
+
+/* Character Stats */
+.light-theme .character-stats-chart {
+	background-image: linear-gradient(to right, rgb(224, 224, 224) 1px, rgb(240, 240, 240) 1px);
+}
+
+.light-theme .character-stats-btn {
+	color: rgb(0, 96, 192);
+}
+
+.light-theme .character-stats-btn:hover {
+	color: #000;
+}
+
+/* Character Move List */
+
+.light-theme .character-move-list > div > div:nth-child(2n) {
+	background-color: rgb(236, 236, 236);
+}
+
+.light-theme .character-move-list > div > div:nth-child(2n+1) {
+	background-color: #fff;
+}
+
+/* Kameo Page */
+.light-theme .kameo-nav div {
+	background-color: rgb(240, 240, 240);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	color: #000;
+}
+
+.light-theme .kameo-page h2 span {
+	color: rgb(32, 32, 32);
+}
+
+/* Combos Page */
+.light-theme .combos-video-combo {
+	color: #fff;
+}
+
+.light-theme .combos-select select {
+	background: rgb(240, 240, 240);
+	color: rgb(32, 32, 32);
+}
+
+.light-theme .combos-select select:hover {
+	background: rgb(224, 224, 224);
+}
+
+.light-theme .combos-select form input[type="submit"] {
+	background-color: rgb(64, 80, 96) !important;
+}
+
+.light-theme .combos-header-toggle-filters-btn,
+.light-theme .combos-header-toggle-groups-btn {
+	color: rgb(0, 96, 192);
+}
+
+.light-theme .combos-header-toggle-filters-btn:hover,
+.light-theme .combos-header-toggle-groups-btn:hover {
+	color: #000;
+}
+
+.light-theme .combos-header nav {
+	background-color: rgb(244, 244, 244);
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.light-theme .combos-header nav div.active {
+	color: #000;
+}
+
+.light-theme .combos-header nav div:hover:not(.active) {
+	color: #000;
+}
+
+.light-theme .combos-list-group-header {
+	background: rgb(248, 244, 240);
+}
+
+.light-theme .combos-list-subcategory {
+	color: #000;
+	text-shadow: 2px 2px 4px #fff;
+}
+
+.light-theme .combos-list-group-body {
+	background: rgb(224, 220, 216);
+}
+
+.light-theme .combos-list-combo {
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+}
+
+.light-theme .combos-list-combo-header {
+	background: rgb(240, 236, 232);
+}
+
+.light-theme .combos-list-combo-footer {
+	background: rgb(220, 216, 212);
+}
+
+.light-theme .combo-play-btn:hover {
+	color: #000;
+}
+
+.light-theme .combos-list-combo-damage {
+	color: #000;
+	text-shadow: 2px 2px #fff;
+}
+
+/* Move List Page */
+.light-theme .move-list-select select,
+.light-theme .move-list-select form input[type="text"] {
+	background: rgb(240, 240, 240);
+	color: rgb(32, 32, 32);
+}
+
+.light-theme .move-list-select select:hover,
+.light-theme .move-list-select form input[type="text"]:hover {
+	background: rgb(224, 224, 224);
+}
+
+.light-theme .move-list-select form input[type="submit"] {
+	background-color: rgb(64, 80, 96) !important;
+}
+
+.light-theme .move-list-select-view .move-list-view-btn:not(.active) {
+	color: rgb(0, 96, 192);
+}
+
+.light-theme .move-list-select-view .move-list-view-btn:hover {
+	color: #000;
+}
+
+.light-theme .move-list-select-view .move-list-view-btn.active {
+	color: #000;
+}
+
+/* Gameplay Page */
+.light-theme .gameplay-select select {
+	background: rgb(240, 240, 240);
+	color: rgb(32, 32, 32);
+}
+
+.light-theme .gameplay-select select:hover {
+	background: rgb(224, 224, 224);
+}
+
+.light-theme .gameplay-select form input[type="submit"] {
+	background-color: rgb(64, 80, 96) !important;
+}
+
+/* Tier Maker */
+.light-theme .tier-maker {
+	color: rgb(224, 224, 224);
+	font-weight: 100;
+}
+
+.light-theme .tier-maker-options-btn {
+	background: rgb(64, 80, 96);
+}
+
+.light-theme .tier-maker-options-left .tier-maker-save-btn-saved {
+	background-color: rgb(32, 128, 64);
+}
+
+.light-theme .tier-list-form-wrapper,
+.light-theme .tier-form-wrapper {
+	background-color: rgb(240, 240, 240);
+	color: rgb(32, 32, 32);
+	font-weight: 200;
+}
+
+.light-theme .tier-list-form input, .light-theme .tier-form input {
+	background: rgb(240, 240, 240);
+	color: rgb(32, 32, 32);
+	font-weight: 200;
+}
+
+.light-theme .tier-list-background-image-thumb {
+	color: rgb(224, 224, 224);
+}
+
+.light-theme .tier-list-background-thumb.tier-list-background-active,
+.light-theme .tier-list-background-image-thumb:hover {
+	border: 1px solid #000;
+}
+
+.light-theme .tier-list-form-color.tier-list-background-active,
+.light-theme .tier-form-color-active,
+.light-theme .tier-list-form-color:hover,
+.light-theme .tier-form-color:hover {
+	border: 2px solid #000;
+}
+
+.light-theme .tier-list-form-reset-btn,
+.light-theme .tier-list-form-cancel-btn,
+.light-theme .tier-form-cancel-btn {
+	background-color: rgb(240, 240, 240);
+	border: 1px solid rgb(48, 48, 48);
+	color: rgb(32, 32, 32);
+	font-weight: 200;
+}
+
+.light-theme .tier-list-form-save-btn,
+.light-theme .tier-form-save-btn {
+	background-color: rgb(64, 80, 96);
+}
+
+/* Teams Page */
+/*
+.light-theme .teams {
+	background-color: rgb(224, 224, 224);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
+*/
+
+/* Site Updates */
+.light-theme .site-updates > :nth-child(2) {
+	border-top: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.light-theme .site-updates > div > div > span:first-child {
+	color: #000;
+}
+
+/* Mobile */
+@media screen and (max-width: 1024px) {
+	.light-theme .combos-list-combo-combo {
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	}
+
+	.light-theme .combos-list-combo-notes {
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	}
+}

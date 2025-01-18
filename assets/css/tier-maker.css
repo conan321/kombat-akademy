@@ -1,0 +1,868 @@
+/* Author: Raptor_FGC / RedRaptor10 */
+
+:root {
+	--initial-item-height: 149px;
+	--initial-item-width: 112px;
+	--item-height: calc(0.75 * var(--initial-item-height));
+	--item-width: calc(0.75 * var(--initial-item-width));
+	--base-height: var(--item-height);
+	--base-width: var(--item-height);
+	--assist-background-color: rgb(16, 16, 16);
+	--assist-small-size: calc((var(--item-width) / 2)); /* Assist Attachment */
+
+	--tier-maker-btn-border-radius: 4px;
+	--tier-maker-btn-color: rgb(224, 224, 224);
+	--tier-maker-color: rgb(224, 224, 224);
+	--tier-maker-download-btn-background-color: rgb(32, 48, 64);
+	--tier-maker-generate-btn-background-color: rgb(32, 48, 64);
+	--tier-maker-options-left-btn-background-color: rgb(32, 48, 64);
+	--tier-maker-save-btn-saved-background-color: rgb(32, 128, 64);
+
+	--tier-list-background-color: rgb(16, 16, 16);
+	--tier-list-border: 1px solid rgb(64, 64, 64);
+	--tier-list-header-background-color: rgba(0, 0, 0, 0.75);
+	--tier-list-title-font-size: 20px;
+	--tier-list-description-font-size: 16px;
+	--tier-list-author-font-size: 16px;
+	--tier-list-date-font-size: 14px;
+
+	--tier-title-font-size: 24px;
+	--tier-title-text-shadow: 1px 1px rgb(0, 0, 0);
+	--tier-description-font-size: 16px;
+	--tier-description-text-shadow: 1px 1px rgb(0, 0, 0);
+	--tier-options-background-color: rgba(0, 0, 0, 0.25);
+	--tier-btn-font-size: 14px;
+
+	--tier-pool-background-color: rgba(0, 0, 0, 0.25);
+	--tier-pool-assists-background-color: rgba(0, 0, 0, 0.25);
+
+	--tier-list-form-background-color: rgb(24, 28, 32);
+	--tier-list-form-background-image-thumb-border: 1px solid rgb(64, 64, 64);
+	--tier-list-form-background-image-thumb-border-active: 1px solid rgb(192, 192, 192);
+	--tier-list-form-background-image-thumb-border-hover: 1px solid rgb(192, 192, 192);
+	--tier-list-form-background-image-thumb-font-size: 24px;
+	--tier-list-form-background-image-thumb-height: auto;
+	--tier-list-form-background-image-thumb-text-shadow: 2px 2px 1px rgb(0, 0, 0);
+	--tier-list-form-background-image-thumb-width: calc(1920px / 8);
+	--tier-list-form-color-border: 2px solid rgb(64, 64, 64);
+	--tier-list-form-color-border-active: 2px solid rgb(192, 192, 192);
+	--tier-list-form-color-border-hover: 2px solid rgb(192, 192, 192);
+	--tier-list-form-color-border-radius: 50%;
+	--tier-list-form-color-size: 32px;
+	--tier-list-form-colors-gap: 16px;
+	--tier-list-form-input-background-color: rgb(32, 36, 40);
+	--tier-list-form-input-background-color-hover: rgb(48, 52, 56);
+	--tier-list-form-input-border: 1px solid rgb(48, 48, 48);
+	--tier-list-form-input-border-radius: 4px;
+	--tier-list-form-input-color: rgb(224, 224, 224);
+	--tier-list-form-btn-border-radius: 4px;
+	--tier-list-form-btn-color: rgb(224, 224, 224);
+	--tier-list-form-cancel-btn-background-color: rgb(32, 36, 40);
+	--tier-list-form-reset-btn-background-color: rgb(32, 36, 40);
+	--tier-list-form-save-btn-background-color: rgb(32, 48, 64);
+}
+
+/* Tier Maker */
+.tier-maker {
+	color: var(--tier-maker-color);
+}
+
+.tier-maker .tier-handle {
+	cursor: move;
+}
+
+.draggable {
+    cursor: pointer; /* Fallback Cursor */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+.draggable:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
+/* Generated */
+/* Resize/Hide Tier List During Image Generation */
+.tier-list-hidden {
+	position: absolute;
+	left: -9999px;
+	width: 100%;
+}
+
+.tier-list-medium {
+	width: 1440px;
+}
+
+.tier-list-large {
+	width: 1920px;
+}
+
+.tier-maker-generated-overlay {
+	align-content: flex-start;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.tier-maker-generated-wrapper {
+	height: 100%;
+	width: 100%;
+}
+
+.tier-maker-download-wrapper {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	padding: 32px 0;
+}
+
+.tier-maker-download-wrapper > a {
+	width: 12.5%;
+}
+
+.tier-maker-download-btn {
+	background-color: var(--tier-maker-download-btn-background-color);
+	border-radius: var(--tier-maker-btn-border-radius);
+	color: var(--tier-maker-btn-color);
+	cursor: pointer;
+	font-weight: 400;
+	padding: 8px 0;
+	text-align: center;
+	transition: filter 0.1s;
+}
+
+.tier-maker-download-btn:hover {
+	filter: brightness(125%);
+}
+
+.tier-maker-generated-close-btn {
+	cursor: pointer;
+	font-size: 32px;
+	position: fixed;
+	right: 5%;
+	transition: filter 0.1s;
+}
+
+.tier-maker-generated-close-btn:hover {
+	filter: brightness(125%);
+}
+
+.tier-maker-image-wrapper {
+	display: flex;
+	height: 75%;
+	justify-content: center;
+	margin: 0 auto;
+	overflow-y: auto;
+	width: 75%;
+}
+
+.tier-maker-image-wrapper canvas {
+	height: fit-content !important;
+	max-width: 100%;
+}
+
+/* Tier Maker Options */
+.tier-maker-options {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	margin: 16px 0;
+}
+
+.tier-maker-options-left {
+	align-items: center;
+	display: flex;
+	gap: 4px;
+	width: calc(100% / 3);
+}
+
+.tier-maker-options-right {
+	width: calc(100% / 3);
+}
+
+.tier-maker-options-btn {
+	border-radius: var(--tier-maker-btn-border-radius);
+	color: var(--tier-maker-btn-color);
+	cursor: pointer;
+	text-align: center;
+	transition: filter 0.1s;
+}
+
+.tier-maker-options-btn:hover {
+	filter: brightness(125%);
+}
+
+.tier-maker-options-left .tier-maker-options-btn {
+	background-color: var(--tier-maker-options-left-btn-background-color);
+	font-weight: 200;
+	padding: 4px 0;
+	width: calc(100% / 3);
+}
+
+.tier-maker-options-left .tier-maker-save-btn-saved {
+	background-color: var(--tier-maker-save-btn-saved-background-color);
+}
+
+.tier-maker-save-btn-saved {
+	cursor: default;
+}
+
+.tier-maker-save-btn-saved:hover {
+	filter: unset;
+}
+
+.tier-maker-options input[type="file"] {
+	display: none;
+}
+
+.tier-maker-generate-btn {
+	background-color: var(--tier-maker-generate-btn-background-color);
+	font-weight: 400;
+	padding: 8px 0;
+	width: 25%;
+}
+
+/* Tier List */
+.tier-list {
+	background-color: var(--tier-list-background-color);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: var(--tier-list-border);
+}
+
+/* Tier List Header */
+.tier-list-header {
+	background: var(--tier-list-header-background-color);
+	border-bottom: var(--tier-list-border);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: calc(var(--base-height) / 2);
+	position: relative;
+}
+
+.tier-list-header-hidden {
+	display: none;
+}
+
+.tier-list-options {
+	height: calc(var(--base-height) / 2);
+	position: absolute;
+	width: var(--base-width);
+}
+
+.tier-list-edit-btn {
+	align-items: center;
+	cursor: pointer;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	width: 100%;
+}
+
+.tier-list-edit-btn:hover {
+	filter: brightness(125%);
+}
+
+.tier-list-header-text {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: calc(var(--base-height) / 2);
+	padding: 8px 0;
+}
+
+.tier-list-title {
+	font-size: var(--tier-list-title-font-size);
+	max-width: calc(100% - (var(--base-width) * 3));
+	text-align: center;
+	word-break: break-word;
+}
+
+.tier-list-description {
+	font-size: var(--tier-list-description-font-size);
+	max-width: calc(100% - (var(--base-width) * 3));
+	text-align: center;
+	word-break: break-word;
+}
+
+.tier-list-info {
+	display: flex;
+	flex-direction: column;
+	height: calc(var(--base-height) / 2);
+	justify-content: center;
+	padding: 8px;
+	position: absolute;
+	right: 0;
+	text-align: right;
+	width: calc(var(--base-width) * 2);
+}
+
+.tier-list-author {
+	align-items: center;
+	display: flex;
+	font-size: var(--tier-list-author-font-size);
+	margin-left: auto;
+	overflow-x: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.tier-list-date {
+	align-items: center;
+	display: flex;
+	font-size: var(--tier-list-date-font-size);
+	margin-left: auto;
+}
+.tier-list-date-hidden {
+	display: none;
+}
+
+/* Tier List Body */
+/* (Optional) Scrollable Tier List */
+/*
+.tier-list-body {
+	max-height: calc((var(--base-height) * 4) + 3px);
+	overflow-y: auto;
+	scrollbar-width: thin;
+}
+
+.tier-list-body::-webkit-scrollbar {
+	width: 8px;
+}
+
+.tier-list-body::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+.tier-list-body::-webkit-scrollbar-thumb {
+	background: transparent;
+	border: transparent;
+}
+*/
+
+/* Tier */
+.tier {
+	display: flex;
+}
+
+.tier:not(:last-child) {
+	border-bottom: var(--tier-list-border);
+}
+
+/* Tier Header */
+.tier-header {
+	align-items: center;
+	display: flex;
+	min-height: var(--base-height);
+	justify-content: center;
+	max-width: var(--base-width);
+	position: relative;
+	text-align: center;
+	width: var(--base-width);
+}
+
+.tier-handle {
+	height: calc(100% - 22px);
+	position: absolute;
+	top: 0;
+	width: var(--base-width);
+}
+
+/* Note: Dark Text for Light Colors */
+.tier-colors-light .tier-header-text {
+	color: rgb(51, 51, 51);
+	font-weight: 300;
+}
+.tier-colors-light .tier-title {
+	text-shadow: unset !important;
+}
+.tier-colors-light .tier-description {
+	text-shadow: unset !important;
+}
+
+.tier-title {
+	font-size: var(--tier-title-font-size);
+	max-width: var(--base-width);
+	text-shadow: var(--tier-title-text-shadow);
+	word-wrap: break-word;
+}
+
+.tier-description {
+	font-size: var(--tier-description-font-size);
+	max-width: var(--base-width);
+	text-shadow: var(--tier-description-text-shadow);
+	word-wrap: break-word;
+}
+
+.tier-options {
+	align-items: center;
+	background: var(--tier-options-background-color);
+	bottom: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+}
+
+.tier-header:hover .tier-options {
+	opacity: 1;
+}
+
+.tier-options > div {
+	cursor: pointer;
+	font-size: var(--tier-btn-font-size);
+	width: calc(100% / 3);
+}
+
+.tier-options > div:hover {
+	filter: brightness(125%);
+}
+
+/* Tier Body */
+.tier-body {
+	border-left: var(--tier-list-border);
+	display: flex;
+	flex-wrap: wrap;
+	width: calc(100% - var(--base-width));
+}
+
+/* Pool */
+.tier-pool {
+	background: var(--tier-pool-background-color);
+	border: var(--tier-list-border);
+	display: flex;
+	flex-wrap: wrap;
+	height: auto;
+	justify-content: center;
+	margin: 16px auto;
+	min-height: var(--item-height);
+	padding: 16px;
+	text-align: center;
+}
+
+.tier-pool .character {
+	height: calc(var(--item-height) * 0.75);
+	width: calc(var(--item-width) * 0.75);
+}
+
+.tier-pool .character .assist {
+	bottom: 1px; /* Subtract image border */
+	height: calc((var(--assist-small-size) - 1px) * 0.75); /* Subtract image border */
+	left: calc(100% - (var(--assist-small-size) * 0.75));
+	width: calc((var(--assist-small-size) - 1px) * 0.75); /* Subtract image border */
+}
+
+.tier-pool-assists {
+	background: var(--tier-pool-assists-background-color);
+	border: var(--tier-list-border);
+	display: flex;
+	flex-wrap: wrap;
+	height: auto;
+	justify-content: center;
+	margin: 0 auto;
+	min-height: var(--item-height);
+	padding: 16px;
+	text-align: center;
+}
+
+.tier-pool-assists .assist {
+	height: calc(var(--item-height) * 0.75);
+	min-width: calc(var(--item-height) * 0.75);
+	width: calc(var(--item-height) * 0.75);
+}
+
+.character {
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: var(--item-height);
+	position: relative;
+	width: var(--item-width);
+}
+
+.character:hover {
+	filter: brightness(125%);
+}
+
+.character .assist {
+	bottom: 2px; /* Subtract image border */
+	height: calc(var(--assist-small-size) - 1px); /* Subtract image border */
+	left: calc(100% - var(--assist-small-size));
+	min-width: unset;
+	position: absolute;
+	width: calc(var(--assist-small-size) - 1px); /* Subtract image border */
+}
+
+.character .assist:hover:before {
+	align-items: center;
+	background: rgba(0, 0, 0, 0.75);
+	content: '\1F5D1';
+	cursor: pointer;
+	display: flex;
+	font-size: 24px;
+	height: 100%;
+	justify-content: center;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.assist {
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: var(--item-height);
+	min-width: var(--item-height);
+	width: var(--item-height);
+}
+
+.assist:not(.character .assist):hover {
+	filter: brightness(125%);
+}
+
+.assist.assist-background {
+	background-color: var(--assist-background-color);
+}
+
+/* Tier List Form */
+.tier-list-form-overlay,
+.tier-form-overlay {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+.tier-list-form-wrapper {
+	width: 75%;
+}
+
+.tier-form-wrapper {
+	width: 50%;
+}
+
+.tier-list-form-wrapper,
+.tier-form-wrapper {
+	background-color: var(--tier-list-form-background-color);
+	border-radius: 8px;
+	height: auto;
+	max-height: 100vh;
+	overflow-y: auto;
+	padding: 32px;
+}
+
+/* Tier List Form - Header */
+.tier-list-form-header,
+.tier-form-header {
+	align-items: center;
+	display: flex;
+}
+
+.tier-list-form-header > div:first-child,
+.tier-form-header > div:first-child {
+	font-size: 24px;
+}
+
+.tier-list-form-close-btn,
+.tier-form-close-btn {
+	cursor: pointer;
+	font-size: 32px;
+	margin-left: auto;
+	transition: filter 0.1s;
+}
+
+.tier-list-form-close-btn:hover,
+.tier-form-close-btn:hover {
+	filter: brightness(125%);
+}
+
+/* Tier List Form - Body */
+.tier-list-form-body,
+.tier-form-body {
+	padding: 16px 0;
+}
+
+.tier-list-form-body > div:not(:first-child),
+.tier-form-body > div:not(:first-child) {
+	margin-top: 8px;
+}
+
+.tier-list-form-body > div > div:first-child,
+.tier-form-body > div > div:first-child {
+	margin-bottom: 8px;
+}
+
+.tier-list-form input[type="text"],
+.tier-form input[type="text"] {
+	background: var(--tier-list-form-input-background-color);
+	border: var(--tier-list-form-input-border);
+	border-radius: var(--tier-list-form-input-border-radius);
+	color: var(--tier-list-form-input-color);
+	width: 100%;
+}
+
+.tier-list-form input[type="text"]:hover,
+.tier-form input:hover {
+	background: var(--tier-list-form-input-background-color-hover);
+}
+
+.tier-list-form input[type="text"]:focus,
+.tier-form input[type="text"]:focus {
+	background: var(--tier-list-form-input-background-color);
+	border: var(--tier-list-form-input-border);
+}
+
+/* Tier List Form - Colors */
+.tier-list-form-colors {
+	margin-bottom: 16px;
+}
+
+.tier-list-form-colors,
+.tier-form-colors {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--tier-list-form-colors-gap);
+	justify-content: center;
+}
+
+.tier-list-form-colors .tier-list-form-color,
+.tier-form-colors .tier-form-color {
+	border: var(--tier-list-form-color-border);
+	border-radius: var(--tier-list-form-color-border-radius);
+	cursor: pointer;
+	height: var(--tier-list-form-color-size);
+	min-height: var(--tier-list-form-color-size);
+	min-width: var(--tier-list-form-color-size);
+	width: var(--tier-list-form-color-size);
+}
+
+.tier-list-form-colors .tier-list-background-active,
+.tier-form-colors .tier-form-color-active {
+	border: var(--tier-list-form-color-border-active);
+}
+
+.tier-list-form-colors .tier-list-form-color:hover,
+.tier-form-colors .tier-form-color:hover {
+	border: var(--tier-list-form-color-border-hover);
+}
+
+/* Tier List Form - Backgrounds */
+.tier-list-form-background-images {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+.tier-list-background-image-thumb {
+	align-items: center;
+	aspect-ratio: 16 / 9;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: var(--tier-list-form-background-image-thumb-border);
+	cursor: pointer;
+	display: flex;
+	font-size: var(--tier-list-form-background-image-thumb-font-size);
+	height: var(--tier-list-form-background-image-thumb-height);
+	justify-content: center;
+	text-align: center;
+	text-shadow: var(--tier-list-form-background-image-thumb-text-shadow);
+	width: var(--tier-list-form-background-image-thumb-width);
+}
+
+.tier-list-background-active {
+	border: var(--tier-list-form-background-image-thumb-border-active);
+}
+
+.tier-list-background-image-thumb:hover {
+	border: var(--tier-list-form-background-image-thumb-border-hover);
+}
+
+/* Tier List Form - Options */
+.tier-list-form-options {
+	display: flex;
+	gap: 16px;
+}
+
+.tier-list-form-options input[type="checkbox"] {
+	cursor: pointer;
+	margin-right: 4px;
+}
+
+.tier-list-form-options label {
+	cursor: pointer;
+}
+
+/* Tier List Form - Footer */
+.tier-list-form-footer,
+.tier-form-footer {
+	display: flex;
+	gap: 8px;
+	justify-content: center;
+}
+
+.tier-list-form-btn,
+.tier-form-btn {
+	border-radius: var(--tier-list-form-btn-border-radius);
+	color: var(--tier-list-form-btn-color);
+	cursor: pointer;
+	font-weight: 400;
+	padding: 8px 0;
+	text-align: center;
+	transition: filter 0.1s;
+	width: 25%;
+}
+
+.tier-list-form-btn:hover,
+.tier-form-btn:hover {
+	filter: brightness(125%);
+}
+
+.tier-list-form-reset-btn {
+	background-color: var(--tier-list-form-reset-btn-background-color);
+}
+
+.tier-list-form-cancel-btn,
+.tier-form-cancel-btn {
+	background-color: var(--tier-list-form-cancel-btn-background-color);
+}
+
+.tier-list-form-save-btn,
+.tier-form-save-btn {
+	background-color: var(--tier-list-form-save-btn-background-color);
+}
+
+/* Mobile */
+@media screen and (max-width: 1024px) {
+	:root {
+		--item-height: calc(149px * 0.5);
+		--item-width: calc(112px * 0.5);
+	}
+
+	.tier-maker-download-wrapper > a {
+		width: 50%;
+	}
+
+	.tier-maker-image-wrapper {
+		overflow: auto;
+	}
+
+	.tier-maker-image-wrapper canvas {
+		left: 0;
+		max-width: initial;
+		position: sticky;
+		top: 0;
+	}
+
+	.tier-maker-options {
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	.tier-maker-options-left {
+		width: 100%;
+	}
+
+	.tier-maker-generate-btn {
+		width: 100%;
+	}
+
+	/* During Image Generating, Reset Styles to Desktop */
+	.tier-list-hidden .tier-list-options {
+		position: absolute;
+		width: var(--base-width);
+	}
+	.tier-list-options {
+		position: initial;
+		width: 100%;
+	}
+
+	.tier-list-hidden .tier-list-edit-btn {
+		margin: initial;
+		width: 100%;
+	}
+	.tier-list-edit-btn {
+		margin: 0 auto;
+		width: fit-content;
+	}
+
+	.tier-list-hidden .tier-list-edit-btn:after {
+		display: none;
+	}
+	.tier-list-edit-btn:after {
+		content: 'Settings';
+		padding: 0 8px;
+	}
+
+	.tier-list-hidden .tier-list-title {
+		max-width: calc(100% - (var(--base-width) * 3));
+	}
+	.tier-list-hidden .tier-list-description {
+		max-width: calc(100% - (var(--base-width) * 3));
+	}
+	.tier-list-title,
+	.tier-list-description {
+		max-width: initial;
+	}
+
+	.tier-list-hidden .tier-list-info {
+		position: absolute; width: var(--base-width);
+	}
+	.tier-list-info {
+		position: initial;
+		width: 100%;
+	}
+
+	.tier-options {
+		opacity: 1;
+	}
+
+	.tier-pool, .tier-pool-assists {
+		height: var(--base-height);
+		overflow-y: auto;
+		padding: 16px 24px;
+	}
+
+	.tier-list-form-wrapper, .tier-form-wrapper {
+		max-height: 100vh;
+		overflow-y: auto;
+		width: 100%;
+	}
+
+	.tier-list-form-btn, .tier-form-btn {
+		width: 50%;
+	}
+
+	.tier-list-form-body > div > div:first-child,
+	.tier-form-body > div > div:first-child {
+		margin-bottom: 4px;
+	}
+
+	.tier-list-form-colors,
+	.tier-form-colors {
+		gap: 4px;
+	}
+
+	.tier-list-form-background-images {
+		gap: 4px;
+	}
+
+	.tier-list-background-image-thumb {
+		font-size: 16px;
+		width: 45%;
+	}
+
+	.tier-list-form-options {
+		display: unset;
+	}
+}

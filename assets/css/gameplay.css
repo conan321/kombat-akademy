@@ -1,0 +1,146 @@
+/* Gameplay Page Description */
+.gameplay-page-description {
+	font-size: 20px;
+	padding: 16px 0;
+	text-align: center;
+}
+
+/* Gameplay Select */
+.gameplay-select {
+	padding: 16px 0;
+}
+
+.gameplay-select-header {
+	display: flex;
+	font-size: 16px;
+	justify-content: center;
+	text-align: center;
+}
+
+.gameplay-select-header div:first-child,
+.gameplay-select-header div:nth-child(2) {
+	margin: 0 8px;
+	width: 25%;
+}
+
+.gameplay-select-header div:nth-child(3) {
+	margin: 0 8px;
+	width: 12.5%;
+}
+
+.gameplay-select-header div:last-child {
+	margin-left: 8px;
+	margin-right: calc(12.5% + 20px);
+	width: 12.5%;
+}
+
+.gameplay-select form {
+	display: flex;
+	justify-content: center;
+}
+
+.gameplay-select select {
+	background: rgb(32, 36, 40);
+	border: 1px solid rgb(48, 48, 48);
+	border-radius: 4px;
+	color: rgb(224, 224, 224);
+	font-size: 16px;
+}
+
+.gameplay-select select:hover {
+	background: rgb(48, 52, 56);
+}
+
+.gameplay-select form div::after {
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-top: 8px solid rgb(128, 128, 128);
+	content: '';
+	pointer-events: none;
+	position: absolute;
+	right: 8px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.gameplay-select form div:first-child, .gameplay-select form div:nth-child(2) {
+	margin: 0 8px;
+	position: relative;
+	width: 25%;
+}
+
+.gameplay-select form div:nth-child(3), .gameplay-select form div:nth-child(4) {
+	margin: 0 8px;
+	position: relative;
+	width: 12.5%;
+}
+
+.gameplay-select form input[type="submit"] {
+	background-color: rgb(32, 48, 64) !important;
+	border-radius: 4px;
+	color: rgb(224, 224, 224) !important;
+	font-size: 16px;
+	margin: 0 8px;
+	transition: filter 0.1s;
+	width: 12.5%;
+}
+
+.gameplay-select form input[type="submit"]:hover {
+	filter: brightness(125%);
+}
+
+/* Mobile */
+@media screen and (max-width: 1024px) {
+	/* Gameplay Page Description */
+	.gameplay-page-description {
+		font-size: 16px;
+	}
+
+	/* Gameplay Select */
+	.gameplay-select-header {
+		display: none;
+	}
+
+	.gameplay-select form {
+		display: block;
+	}
+
+	.gameplay-select form div:first-child, .gameplay-select form div:nth-child(2),
+	.gameplay-select form div:nth-child(3), .gameplay-select form div:nth-child(4) {
+		margin: 0 0 8px 0;
+		width: 100%;
+	}
+
+	.gameplay-select form div:first-child::before {
+		content: 'CHARACTER';
+		display: block;
+		margin-bottom: 4px;
+	}
+
+	.gameplay-select form div:nth-child(2)::before {
+		content: 'KAMEO';
+		display: block;
+		margin-bottom: 4px;
+	}
+
+	.gameplay-select form div:nth-child(3)::before {
+		content: 'START DATE';
+		display: block;
+		margin-bottom: 4px;
+	}
+
+	.gameplay-select form div:nth-child(4)::before {
+		content: 'END DATE';
+		display: block;
+		margin-bottom: 4px;
+	}
+
+	.gameplay-select form input[type="submit"] {
+		margin: 8px 0;
+		width: 100%;
+	}
+
+	.gameplay-select form div::after {
+		top: calc(100% - 20px);
+	}
+}

@@ -1,0 +1,91 @@
+.kameo-page #kameo-header {
+	padding-bottom: 32px;
+}
+
+.kameo-page section:not(#kameo-header) {
+	padding: 32px 0;
+}
+
+.kameo-header-title {
+	font-size: 32px;
+	font-weight: 200;
+}
+
+.kameo-header-content {
+	display: flex;
+}
+
+.kameo-nav-wrapper {
+	width: 50%;
+}
+
+.kameo-nav {
+	margin: 0 auto;
+	padding-top: 32px;
+	width: 75%;
+}
+
+.kameo-nav div {
+	background-color: rgb(16, 16, 16);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	color: #fff;
+	font-size: 24px;
+	font-weight: 200;
+	margin-bottom: 8px;
+	padding: 16px 0;
+}
+
+.kameo-nav .fa-solid {
+	margin-left: 16px;
+	text-align: center;
+	width: 12.5%;
+}
+
+.kameo-img-wrapper {
+	display: flex;
+	justify-content: center;
+	width: 50%;
+}
+
+.kameo-img-wrapper img {
+	height: fit-content;
+	width: 75%;
+}
+
+.kameo-page h2 {
+	font-weight: 200;
+}
+
+.kameo-page h2 span {
+	color: var(--color);
+	font-weight: 100;
+}
+
+/* Mobile */
+@media screen and (max-width: 1024px) {
+	.kameo-header-content {
+		display: block;
+	}
+
+	.kameo-nav-wrapper {
+		width: unset;
+	}
+
+	.kameo-nav {
+		margin: 16px auto 0 auto;
+		width: unset;
+	}
+
+	.kameo-nav div {
+		padding: 8px 0;
+	}
+
+	.kameo-nav .fa-solid {
+		margin-left: 5%;
+		width: 48px;
+	}
+
+	.kameo-img-wrapper {
+		display: none;
+	}
+}

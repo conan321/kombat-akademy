@@ -1,0 +1,126 @@
+.character-stats > div:first-child {
+	display: flex;
+	/*height: 336px;*/
+	height: 300px; /* Row Height * (Num Rows + 1) */
+}
+
+.character-stats-left {
+	padding: 0 16px;
+}
+
+.character-stats-left div {
+	align-items: center;
+	display: flex;
+	font-size: 16px;
+	font-weight: 200;
+	height: calc(100% / 7);
+}
+
+.character-stats-right {
+	width: 100%;
+}
+
+.character-stats-chart {
+	background-image: linear-gradient(to right, rgb(32, 32, 32) 1px, rgb(16, 16, 16) 1px);
+	background-size: 20%;
+	border-bottom: 1px solid rgb(128, 128, 128);
+	border-left: 1px solid rgb(128, 128, 128);
+	height: calc(100% - (100% / 7));
+	width: 100%;
+}
+
+.character-stats-chart-row {
+	display: flex;
+	height: calc(100% / 6);
+	padding: 4px 0;
+}
+
+.character-stats-chart-bar {
+	border-bottom: 1px solid rgb(128, 128, 128);
+	border-right: 1px solid rgb(128, 128, 128);
+	border-top: 1px solid rgb(128, 128, 128);
+	display: flex;
+	transition: 1s ease-out;
+}
+
+.character-stats-chart-bar-0, .character-stats-chart.empty .character-stats-chart-bar {
+	border: 0;
+	width: 0;
+}
+
+.character-stats-chart-bar-1 {
+	width: 20%;
+}
+
+.character-stats-chart-bar-2 {
+	width: 40%;
+}
+
+.character-stats-chart-bar-3 {
+	width: 60%;
+}
+
+.character-stats-chart-bar-4 {
+	width: 80%;
+}
+
+.character-stats-chart-bar-5 {
+	width: 100%;
+}
+
+.character-stats-chart-row:nth-child(1) .character-stats-chart-bar {
+	background-color: rgba(224, 112, 64, 0.75); /* Orange */
+}
+
+.character-stats-chart-row:nth-child(2) .character-stats-chart-bar {
+	background-color: rgba(64, 64, 224, 0.75); /* Blue */
+}
+
+.character-stats-chart-row:nth-child(3) .character-stats-chart-bar {
+	background-color: rgba(224, 64, 64, 0.75); /* Red */
+}
+
+.character-stats-chart-row:nth-child(4) .character-stats-chart-bar {
+	background-color: rgba(224, 224, 64, 0.75); /* Yellow */
+}
+
+.character-stats-chart-row:nth-child(5) .character-stats-chart-bar {
+	background-color: rgba(64, 224, 64, 0.75); /* Green */
+}
+
+.character-stats-chart-row:nth-child(6) .character-stats-chart-bar {
+	background-color: rgba(112, 64, 224, 0.75); /* Purple */
+}
+
+.character-stats-values {
+	display: flex;
+}
+
+.character-stats-values div {
+	font-size: 16px;
+	text-align: right;
+	width: 20%;
+}
+
+.character-stats-btn-wrapper {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.character-stats-btn {
+	color: rgb(192, 224, 255);
+	cursor: pointer;
+	font-size: 20px;
+	transition: 0.5s;
+}
+
+.character-stats-btn:hover {
+	color: #fff;
+}
+
+/* Mobile */
+@media screen and (max-width: 1024px) {
+	.character-stats-left {
+		padding: 0 16px 0 0;
+	}
+}
