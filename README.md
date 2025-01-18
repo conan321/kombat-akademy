@@ -3,13 +3,13 @@ A strategy guide website for the fighting game *Mortal Kombat 1*. This project w
 
 The site provides information for character data, frame data, combos, guides, and gameplay. It also includes a Tier Maker for users to create their own tier lists. Much of the site was still in-progress and there was a lot of missing data for combos and guides. All of this required a large effort and ultimately was too much to handle.
 
-Last update: 11/19/2024 (ver. 0.289-1113952)
-
 |     |     |
 | --- | --- |
 | ![](/screenshots/character-1.jpg) | ![](/screenshots/character-2.jpg) |
 | ![](/screenshots/move-list-table.jpg) | ![](/screenshots/combos.jpg) |
 | ![](/screenshots/characters.jpg) | ![](/screenshots/tier-maker.jpg) |
+
+Last update: 11/19/2024 (ver. 0.289-1113952)
 
 *Note: WordPress site, pages, and database must be set up separately if you want to use the site. I will not provide resources for how to set those up.*
 
@@ -21,5 +21,5 @@ Thank you to everyone who has helped me with this project. To all those who supp
 
 ## Tech
 - PHP
-- HTML / JavaScript / CSS
+- JavaScript / CSS / HTML
 - WordPress
