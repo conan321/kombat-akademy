@@ -16,7 +16,7 @@ The site provides information for character data, frame data, combos, guides, an
 - Combos & Video Guides
 - Advanced Filtering Options
 - Button Platform Switcher
-- Tier Maker
+- Tier Maker ([See Demo](https://redraptor10.github.io/Tier-Maker-MK1/))
 - Gameplay Videos
 - Teams Page
 
