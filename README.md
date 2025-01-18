@@ -9,6 +9,17 @@ The site provides information for character data, frame data, combos, guides, an
 | ![](/screenshots/move-list-table.jpg) | ![](/screenshots/combos.jpg) |
 | ![](/screenshots/characters.jpg) | ![](/screenshots/tier-maker.jpg) |
 
+## Features
+- General Gameplay Guides
+- Character Overviews & Stats
+- Move List / Frame Data Viewer
+- Combos & Video Guides
+- Advanced Filtering Options
+- Button Platform Switcher
+- Tier Maker
+- Gameplay Videos
+- Teams Page
+
 Last update: 11/19/2024 (ver. 0.289-1113952)
 
 *Note: WordPress site, pages, and database must be set up separately if you want to use the site. I will not provide resources for how to set those up.*
