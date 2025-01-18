@@ -1,0 +1,11 @@
+To Do:
+- Add character guides to Strategy sections
+- Update Takeda combos
+- Update Ghostface page Moves section
+- Update Cyrax, Sektor, Noob, Ghostface pages Combos section
+- Add corner and Kameo combos for remaining characters
+- Update Teams page and Kameos sections for all characters
+- Create Full Strategy guides for all characters
+- Create Kameo pages
+- Add gameplay videos for 2024
+- Update site for Conan the Barbarian and Jan 2025 patch
