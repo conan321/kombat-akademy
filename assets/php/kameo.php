@@ -3,7 +3,7 @@ $kameos = include("data/kameos.php");
 
 $kameo = null;
 $slug = get_post_field('post_name');
-$url_renders = "https://mk1.kombatakademy.com/wp-content/uploads/kameos/renders/";
+$url_renders = "https://mk1.appservice.vn/wp-content/uploads/kameos/renders/";
 
 foreach($kameos as $k) {
 	if ($k["slug"] == $slug) {

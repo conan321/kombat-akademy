@@ -49,7 +49,7 @@
 				<li>Added <a href="/move-list/?character=peacemaker">Peacemaker</a> and <a href="/move-list/?kameo=janet-cage">Janet Cage</a> frame data and <a href="/combos/?character=peacemaker">Peacemaker</a> combos</li>
 				<li>Added <a href="/guides/the-match/">Intro Guide</a> part two</li>
 				<li>Updated <a href="/combos/">Combos Page</a> for improved readability</li>
-				<li>Added first batch of Kameo combos. Thank you to <a href="/credits/">these users</a> for their contributions! As a reminder, if you'd like to help with this project, please submit combos to <a href="mailto:kombatakademy.com@gmail.com?subject=Combo Submission">kombatakademy@gmail.com</a>.</li>
+				<li>Added first batch of Kameo combos. Thank you to <a href="/credits/">these users</a> for their contributions! As a reminder, if you'd like to help with this project, please submit combos to <a href="mailto:kombatakademy.com@gmail.com?subject=Combo Submission">minhduc0401@gmail.com</a>.</li>
 				<li>Added a Buy Me A Coffee link to the <a href="/donate/">Donate Page</a></li>
 			</ul>
 		</div>

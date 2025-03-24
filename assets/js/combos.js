@@ -141,7 +141,7 @@ function getYouTubeId(url) {
 
 function loadPlaylist(ids) {
 	let video = document.querySelector('.combos-playlist iframe');
-	let origin = 'https://mk1.kombatakademy.com';
+	let origin = 'https://mk1.appservice.vn';
 
 	video.src = 'https://www.youtube.com/embed/' + ids[0] + '?playlist=' + ids[0];
 	video.frameBorder = '0';
@@ -159,7 +159,7 @@ function loadPlaylist(ids) {
 
 function loadVideo(url, combo) {
 	let id = getYouTubeId(url);
-	let origin = 'https://mk1.kombatakademy.com';
+	let origin = 'https://mk1.appservice.vn';
 
 	let playlist = document.querySelector('.combos-playlist iframe');
 	let videoContainer = document.querySelector('.combos-video');

@@ -127,11 +127,11 @@ $conn = null;
 		if ($corner_combo_count <= 5 && $kameo_combo_count <= 5 && $kameo_name) { $missing = "Corner/Kameo"; }
 		?>
 		<div class="combos-page-description" style="background: rgb(64 16 16); color: #fff; width: 75%; border-radius: 8px; margin: 16px auto; font-weight: 200; padding: 16px;">
-			This character is missing <?php echo $missing; ?> combos. Submit combos to <a href="mailto:kombatakademy@gmail.com?subject=Combo Submission">kombatakademy@gmail.com</a>.
+			This character is missing <?php echo $missing; ?> combos. Submit combos to <a href="mailto:minhduc0401@gmail.com?subject=Combo Submission">minhduc0401@gmail.com</a>.
 		</div>
 	<?php } else { ?>
 	<div class="combos-page-description">
-		If you'd like to help with this project, submit combos to <a href="mailto:kombatakademy@gmail.com?subject=Combo Submission">kombatakademy@gmail.com</a>.
+		If you'd like to help with this project, submit combos to <a href="mailto:minhduc0401@gmail.com?subject=Combo Submission">minhduc0401@gmail.com</a>.
 	</div>
 	<?php } ?>
 

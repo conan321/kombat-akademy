@@ -10,7 +10,7 @@ $mute = isset($a[7]) ? (int)$a[7] : 1;
 $title_bottom = isset($a[8]) ? $a[8] : false;
 $id = '';
 $class = '';
-$origin = 'https://mk1.kombatakademy.com';
+$origin = 'https://mk1.appservice.vn';
 
 // Get YouTube ID
 $reg_exp = '/^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/';
