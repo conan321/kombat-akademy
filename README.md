@@ -24,6 +24,39 @@ Last update: 11/19/2024 (ver. 0.289-1113952)
 
 *Note: WordPress site, pages, and database must be set up separately if you want to use the site. I will not provide resources for how to set those up.*
 
+## Deploys
+- Copy assets/img to /images
+- Copy assets/img/site and assets/img/kameos to /wp-content/uploads/
+- Header :
+    + Disable title, add logo file assets/img/site/logo.png and avatar.png to Site Icon (Logo & Site Identity)
+    + Clear all object in Header Top, Header Main, Header Bottom
+    + Insert shortcode [php file="header-top"] to "HTML 1" and put "HTML 1" in Header Top
+    + Put Logo in Header Main
+    + Put Primary Menu in Header Bottom
+    + Menu Sidebar -> Skin Mode (Dark)
+- Layouts :
+    + Sidebars : set all with "Content (no sidebars)" (Default, pages, blog, search, 404)
+    + Page Header -> Display Settings -> Display -> set all to "Hide" (Single, categories, index, search, archive)
+    + Page Header -> Cover settings -> Show Title, Show Tagline (Disable)
+    + Page Header -> Titlebar settings -> Show Tilte, Show Tagline (Disable)
+- Blog:
+    + Single Blog Post : Hide Title, Meta, Tags, Author Biography, Related Posts, Comment Form
+- Footer:
+    + Copyright : clear all object on Footer Sidebar x, insert shortcode [php file="footer"] in Copyright, put Copyright to Footer Bottom
+- Pages :
+    + About, Term of service, Credit, Donate, Contact, Privacy Policy => use shortcode
+    + Characters, Kameos, Move List, Combos, Tier List, Gameplay, Updates, Teams
+    + Add one by one character page with parent id (characters page), use shortcode [php file="character"]
+    + Add one by one kameo page with parent id (kameos page), use shortcode [php file="kameo"]
+    + Fix load move list fail by date format, m-d-Y -> Y-m-d, m/d/Y -> Y/m/d
+    + Fix load move list fail when use utf8mb4 encode, replace to * in notes column in move list table
+    + Fix load gameplay fail by date format, m-d-Y -> Y-m-d, m/d/Y -> Y/m/d
+- Menus :
+    + Add to primary menu : Home, Move List, Combos, Kameos, Charracters, Other -> Tier list, Gameplay, Updates, Teams
+- Fonts :
+    + Install Font Awesome 5 with Font Awesome plugin
+
+
 ## Discontinuation
 The project has been discontinued for a combination of reasons: The increasing site costs, too much work and not enough time, little to no motivation, low interest and little usage from users, lack of support/donations, personal dislike of the game, bad past experiences, and so on. I don't see much reason for me to continue, so I am leaving this project to the community.
 
