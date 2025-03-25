@@ -31,21 +31,21 @@ if (isset($_GET["start_date"])) {
 
 	if ($start_date == "") {
 		$start_date_time = DateTime::createFromFormat('Y-m-d', end($versions)["release_date"]);
-		$start_date = $start_date_time->format('m-d-Y');
+		$start_date = $start_date_time->format('Y-m-d');
 	}
 } else {
 	$start_date_time = DateTime::createFromFormat('Y-m-d', end($versions)["release_date"]);
-	$start_date = $start_date_time->format('m-d-Y');
+	$start_date = $start_date_time->format('Y-m-d');
 }
 
 if (isset($_GET["end_date"])) {
 	$end_date = $_GET["end_date"];
 
 	if ($end_date == "") {
-		$end_date = date('m-d-Y');
+		$end_date = date('Y-m-d');
 	}
 } else {
-	$end_date = date('m-d-Y');
+	$end_date = date('Y-m-d');
 }
 
 if ($slug_character) {
@@ -78,8 +78,8 @@ if ($char_name || $kameo_name) {
 			$query .= " WHERE kameos LIKE '%$kameo_name%'";
 		}
 
-		$start_date_time = DateTime::createFromFormat('m-d-Y', $start_date);
-		$end_date_time = DateTime::createFromFormat('m-d-Y', $end_date);
+		$start_date_time = DateTime::createFromFormat('Y-m-d', $start_date);
+		$end_date_time = DateTime::createFromFormat('Y-m-d', $end_date);
 		$start_date_formatted = $start_date_time->format('Y-m-d');
 		$end_date_formatted = $end_date_time->format('Y-m-d');
 
@@ -143,8 +143,8 @@ $conn = null;
 				<select name="start_date">
 					<?php foreach ($versions as $v) {
 						$release_date = date_create($v["release_date"]);
-						$release_date_formatted_1 = date_format($release_date, "m-d-Y");
-						$release_date_formatted_2 = date_format($release_date, "m/d/Y"); ?>
+						$release_date_formatted_1 = date_format($release_date, "Y-m-d");
+						$release_date_formatted_2 = date_format($release_date, "Y/m/d"); ?>
 
 						<option value="<?php echo $release_date_formatted_1 ?>" <?php if ($release_date_formatted_1 == $start_date) { echo 'selected'; } ?>>
 							<?php echo $release_date_formatted_2 ?>
@@ -156,16 +156,16 @@ $conn = null;
 				<select name="end_date">
 					<?php
 					$current_date = date_create(date('Y-m-d'));
-					$current_date_formatted_1 = date_format($current_date, "m-d-Y");
-					$current_date_formatted_2 = date_format($current_date, "m/d/Y"); ?>
+					$current_date_formatted_1 = date_format($current_date, "Y-m-d");
+					$current_date_formatted_2 = date_format($current_date, "Y/d/d"); ?>
 					<option value="<?php echo $current_date_formatted_1 ?>" <?php if ($current_date_formatted_1 == $end_date) { echo 'selected'; } ?>>
 						Today
 					</option>
 
 					<?php foreach ($versions as $v) {
 						$release_date = date_create($v["release_date"]);
-						$release_date_formatted_1 = date_format($release_date, "m-d-Y");
-						$release_date_formatted_2 = date_format($release_date, "m/d/Y"); ?>
+						$release_date_formatted_1 = date_format($release_date, "Y-m-d");
+						$release_date_formatted_2 = date_format($release_date, "Y/m/d"); ?>
 
 						<option value="<?php echo $release_date_formatted_1 ?>" <?php if ($release_date_formatted_1 == $end_date) { echo 'selected'; } ?>>
 							<?php echo $release_date_formatted_2 ?>

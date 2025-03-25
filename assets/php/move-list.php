@@ -11,7 +11,7 @@ usort($versions, function ($a, $b) {
 $slug_character = "";
 $slug_kameo = "";
 $category = "basic-attacks";
-$date = date('m_d_Y', strtotime($versions[0]["release_date"]));
+$date = date('Y_m_d', strtotime($versions[0]["release_date"]));
 
 $advanced = false;
 $move_param = "";
@@ -407,8 +407,8 @@ $conn = null;
 					<select name="date">
 						<?php foreach ($versions as $v) {
 							$release_date = date_create($v["release_date"]);
-							$release_date_formatted_1 = date_format($release_date, "m-d-Y");
-							$release_date_formatted_2 = date_format($release_date, "m/d/Y"); ?>
+							$release_date_formatted_1 = date_format($release_date, "Y-m-d");
+							$release_date_formatted_2 = date_format($release_date, "Y/m/d"); ?>
 
 							<option value="<?php echo $release_date_formatted_1 ?>" <?php if ($release_date_formatted_1 == str_replace('_', '-', $date)) { echo 'selected'; } ?>>
 								<?php echo $release_date_formatted_2 ?>
