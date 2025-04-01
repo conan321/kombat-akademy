@@ -16,7 +16,7 @@ function register_scripts() {
 	wp_register_script('jquery-3-4-1', get_stylesheet_directory_uri() . '/assets/js/jquery-3.4.1.js', array(), null);
 
 	// Script
-	wp_register_script('script', get_stylesheet_directory_uri() . '/assets/js/script.js', array(), '1.0.11', true);
+	wp_register_script('script', get_stylesheet_directory_uri() . '/assets/js/script.js', array(), '1.0.12', true);
 
 	// Light Theme
 	wp_register_style('light-theme', get_stylesheet_directory_uri() . '/assets/css/light-theme.css', array(), '1.0.8');
