@@ -2,6 +2,12 @@
 	<h1>SITE UPDATES</h1>
 	<div>
 		<div>
+			<div>04/01/2025</div>
+			<ul>
+				<li>Added <a href="/move-list/?character=t-1000">T-1000</a> frame data</li>
+			</ul>
+		</div>
+		<div>
 			<div>10/10/2024</div>
 			<ul>
 				<li>Added <a href="/move-list/?character=cyrax">Cyrax</a> frame data and <a href="/combos/?character=cyrax">Cyrax</a> combos</li>
