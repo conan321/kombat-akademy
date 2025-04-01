@@ -79,5 +79,9 @@ return array(
 	array(
 		'version' => '0.289-1113952',
 		'release_date' => '2024-11-19'
+	),
+	array(
+		'version' => '0.290-123953',
+		'release_date' => '2025-04-01'
 	)
 );

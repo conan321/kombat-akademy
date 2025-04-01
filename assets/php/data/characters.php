@@ -626,5 +626,24 @@ return array(
 			'range' => 4,
 			'zoning' => 3
 		)
+	),
+	'T-1000' => array(
+		'name' => 'T-1000',
+		'slug' => 't-1000',
+		'type' => 'Zoner',
+		'description' => '',
+		'color' => 'rgb(0, 128, 255)',
+		'color_dark' => 'rgb(128, 80, 0)',
+		'health' => 700,
+		'pros' => array(),
+		'cons' => array(),
+		'stats' => array(
+			'offense' => 4,
+			'defense' => 3,
+			'damage' => 3,
+			'mobility' => 3,
+			'range' => 4,
+			'zoning' => 4
+		)
 	)
 );
