@@ -28,5 +28,6 @@ return array(
 	'Smoke' => array('Goro', 'Sektor', 'Kung Lao', 'Sub-Zero', 'Scorpion'),
 	'Sub-Zero' => array('Ferra', 'Khameleon', 'Sonya', 'Darrius'),
 	'Takeda' => array('Jax', 'Sektor', 'Scorpion', 'Janet Cage', 'Kano'),
-	'Tanya' => array('Motaro', 'Goro')
+	'Tanya' => array('Motaro', 'Goro'),
+	'T-1000' => array('Mavado', 'Stryker', 'Darrius', 'Scorpion')
 );

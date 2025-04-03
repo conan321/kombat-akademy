@@ -2,7 +2,7 @@
 $characters = include("data/characters.php");
 
 $roster = array(
-	'Noob Saibot', 'Cyrax', 'Ermac', 'Kitana', 'Mileena', 'Tanya', 'Rain', 'Smoke', 'Scorpion', 'Sub-Zero', 'Reptile', 'Li Mei', 'Kenshi', 'Baraka', 'Geras', 'Omni-Man', 'Peacemaker', 'Ghostface', '',
+	'Noob Saibot', 'Cyrax', 'Ermac', 'Kitana', 'Mileena', 'Tanya', 'Rain', 'Smoke', 'Scorpion', 'Sub-Zero', 'Reptile', 'Li Mei', 'Kenshi', 'Baraka', 'Geras', 'Omni-Man', 'Peacemaker', 'Ghostface', 'T-1000',
 	'', 'Sektor', 'Takeda', 'Shang Tsung', 'General Shao', 'Sindel', 'Reiko', 'Raiden', 'Liu Kang', '', 'Johnny Cage', 'Kung Lao', 'Ashrah', 'Nitara', 'Havik', 'Quan Chi', 'Homelander', '', ''
 );
 $total = 38;
@@ -76,7 +76,7 @@ $total = 38;
 				if ($i == 0 || $i == $total / 2) { ?>
 					<div class="character-roster-row">
 				<?php }
-				if ($i != 18 && $i != 19 && $i != 28 && $i != 36 && $i != 37) { ?>
+				if ($i != 19 && $i != 28 && $i != 36 && $i != 37) { ?>
 						<div id="<?php echo $roster[$i] ?>" class="character-roster-portrait" title="<?php echo $roster[$i] ?>" style="background-image: url('/images/characters/portraits/<?php echo $characters[$roster[$i]]['slug'] ?>.jpg');">
 							<a href="/characters/<?php echo $characters[$roster[$i]]['slug'] ?>/"></a>
 						</div>
