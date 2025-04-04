@@ -179,5 +179,14 @@ return array(
 		'color' => 'rgb(255, 140, 0)',
 		'color_dark' => 'rgb(95, 60, 0)',
 		'health' => 400
+	),
+	'Madam Bo' => array(
+		'name' => 'Madam Bo',
+		'slug' => 'madam-bo',
+		'type' => '',
+		'description' => 'This is a description.',
+		'color' => 'rgb(255, 140, 0)',
+		'color_dark' => 'rgb(95, 60, 0)',
+		'health' => 400
 	)
 );

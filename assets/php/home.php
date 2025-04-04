@@ -5,7 +5,7 @@
 			<div>
 				<div>04/01/2025</div>
 				<ul>
-					<li>Added <a href="/move-list/?character=t-1000">T-1000</a> frame data</li>
+					<li>Added <a href="/move-list/?character=t-1000">T-1000</a> and <a href="/move-list/?kameo=madam-bo">Madam Bo</a> frame data</li>
 				</ul>
 			</div>
 			<div>

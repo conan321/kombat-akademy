@@ -2,8 +2,8 @@
 $kameos = include("data/kameos.php");
 
 $roster = array(
-	'Janet Cage', 'Darrius', 'Sareena', 'Cyrax', 'Kano', 'Sonya', 'Sektor', 'Frost', 'Jax', 'Khameleon',
-	'Ferra', 'Stryker', 'Scorpion', 'Sub-Zero', 'Kung Lao', 'Shujinko', 'Motaro', 'Goro', 'Tremor', 'Mavado'
+	'Janet Cage', 'Darrius', 'Sareena', 'Cyrax', 'Kano', 'Sonya', 'Sektor', 'Frost', 'Jax', 'Khameleon', 'Madam Bo',
+	'Ferra', 'Stryker', 'Scorpion', 'Sub-Zero', 'Kung Lao', '', 'Shujinko', 'Motaro', 'Goro', 'Tremor', 'Mavado'
 );
 $total = 20;
 
@@ -18,7 +18,7 @@ $total = 20;
 				if ($i == 0 || $i == $total / 2) { ?>
 					<div class="kameo-roster-row">
 				<?php }
-				if ($i != -1) { ?>
+				if ($i != -1 && $i != 16) { ?>
 						<div id="<?php echo $roster[$i] ?>" class="kameo-roster-portrait" title="<?php echo $roster[$i] ?>" style="background-image: url('/images/kameos/portraits/<?php echo $kameos[$roster[$i]]['slug'] ?>.png'), linear-gradient(to top, rgb(105, 89, 73), #000);">
 							<a href="/kameos/<?php echo $kameos[$roster[$i]]['slug'] ?>/"></a>
 						</div>
