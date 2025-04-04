@@ -2,10 +2,10 @@
 $kameos = include("data/kameos.php");
 
 $roster = array(
-	'Janet Cage', 'Darrius', 'Sareena', 'Cyrax', 'Kano', 'Sonya', 'Sektor', 'Frost', 'Jax', 'Khameleon', 'Madam Bo',
+	'Janet Cage', 'Darrius', 'Sareena', 'Cyrax', 'Kano', 'Jax', 'Sonya', 'Sektor', 'Frost', 'Khameleon', 'Madam Bo',
 	'Ferra', 'Stryker', 'Scorpion', 'Sub-Zero', 'Kung Lao', '', 'Shujinko', 'Motaro', 'Goro', 'Tremor', 'Mavado'
 );
-$total = 20;
+$total = 22;
 
 ?>
 
